@@ -1,0 +1,15 @@
+services:
+  ros-kobuki:
+    build:
+      context: .
+    image: j3soon/ros-melodic-kobuki
+    container_name: ros-melodic-kobuki
+    devices:
+      - /dev/kobuki
+    working_dir: "/root/catkin_ws"
+    command: |-
+      bash -c "
+      cd ~/catkin_ws &&
+      source ./devel/setup.bash &&
+      roslaunch turtlebot_bringup minimal.launch
+      "
