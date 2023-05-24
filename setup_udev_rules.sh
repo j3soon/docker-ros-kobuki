@@ -8,3 +8,4 @@ sudo service udev reload
 sudo service udev restart
 read -p "Please (re-)connect Kobuki now, and Press enter to continue."
 ls /dev/kobuki
+echo "done"
