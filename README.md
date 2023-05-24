@@ -29,29 +29,33 @@ You should see `done` if everything works correctly.
 
 ## Teleoperation
 
+```sh
+sudo apt-get update && sudo apt-get install -y docker.io docker-compose
+# Connect and power on kobuki
+./docker-compose.sh up -d
+./docker-exec-teleop.sh
+# Control kobuki with keyboard
+# Press Ctrl+C to exit
+./docker-compose.sh shutdown
+```
+
+The [pre-built docker images](https://hub.docker.com/repository/docker/j3soon/ros-melodic-kobuki/tags) will be pulled automatically.
+
+## Build Docker Images Locally
+
 - On amd64 machine:
 
   ```sh
-  sudo apt-get update && sudo apt-get install -y docker.io docker-compose
-  # Connect and power on kobuki
-  ./docker-compose.sh up -d
-  ./docker-exec-teleop.sh
-  # Control kobuki with keyboard
-  # Press Ctrl+C to exit
-  ./docker-compose.sh shutdown
+  docker build -f Dockerfile -t j3soon/ros-melodic-kobuki:latest
   ```
 
 - On arm64 machine:
 
   ```sh
-  sudo apt-get update && sudo apt-get install -y docker.io docker-compose
-  # Connect and power on kobuki
-  ./docker-compose.jetson.sh up -d
-  ./docker-exec-teleop.sh
-  # Control kobuki with keyboard
-  # Press Ctrl+C to exit
-  ./docker-compose.jetson.sh shutdown
+  docker build -f Dockerfile.jetson -t j3soon/ros-melodic-kobuki:latest
   ```
+
+If you want to build an image that supports multiple architectures, please refer to the [build workflow](./.github/workflows/build.yaml).
 
 ## Third Party Scripts
 

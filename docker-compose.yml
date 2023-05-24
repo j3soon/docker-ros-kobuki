@@ -1,8 +1,6 @@
 version: "3"
 services:
   ros-kobuki:
-    build:
-      context: .
     image: j3soon/ros-melodic-kobuki
     container_name: ros-melodic-kobuki
     devices:
