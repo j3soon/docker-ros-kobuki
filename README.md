@@ -64,11 +64,14 @@ If you want to build an image that supports multiple architectures, please refer
 
 ## Tests
 
-Last tested manually on 2023/05/19:
+Last tested manually on 2023/05/24:
 
 - Ubuntu 18.04.6 LTS (amd64) on Intel CPU
-- Ubuntu 22.04.2 LTS (amd64) on AMD CPU
 - Ubuntu 20.04.5 LTS (arm64) on Jetson AGX Xavier (Jetpack 5.1.1)
+
+Last tested manually on 2023/05/19:
+
+- Ubuntu 22.04.2 LTS (amd64) on AMD CPU
 
 ## Troubleshooting
 
