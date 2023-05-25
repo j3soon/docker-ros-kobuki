@@ -39,7 +39,7 @@ sudo apt-get update && sudo apt-get install -y docker.io docker-compose
 ./docker-compose.sh shutdown
 ```
 
-The [pre-built docker images](https://hub.docker.com/repository/docker/j3soon/ros-melodic-kobuki/tags) will be pulled automatically.
+The [pre-built docker images](https://hub.docker.com/r/j3soon/ros-melodic-kobuki/tags) will be pulled automatically.
 
 ## Build Docker Images Locally
 
