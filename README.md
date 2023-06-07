@@ -43,6 +43,8 @@ sudo apt-get update && sudo apt-get install -y docker.io docker-compose
 
 The [pre-built docker images](https://hub.docker.com/r/j3soon/ros-melodic-kobuki/tags) will be pulled automatically.
 
+Please note that we do not support hot plugging. If you unplugged Kobuki, you need to restart the container.
+
 ## Build Docker Images Locally
 
 - On amd64 machine:
@@ -77,4 +79,4 @@ Last tested manually on 2023/05/19:
 
 ## Troubleshooting
 
-- Most command failures can be resolved by simply re-running the command.
+- Most command failures can be resolved by simply re-running the command or rebooting Kobuki.
