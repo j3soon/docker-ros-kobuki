@@ -35,6 +35,8 @@ You should see `done` if everything works correctly.
 sudo apt-get update && sudo apt-get install -y docker.io docker-compose
 # Connect and power on kobuki
 ./docker-compose.sh up -d
+./docker-exec-bringup.sh
+# Open a new terminal
 ./docker-exec-teleop.sh
 # Control kobuki with keyboard
 # Press Ctrl+C to exit
@@ -43,7 +45,12 @@ sudo apt-get update && sudo apt-get install -y docker.io docker-compose
 
 The [pre-built docker images](https://hub.docker.com/r/j3soon/ros-melodic-kobuki/tags) will be pulled automatically.
 
-Please note that we do not support hot plugging. If you unplugged Kobuki, you need to restart the container.
+Although the docker container support hot plugging, if Kobuki is re-plugged or re-booted, you still need to re-run the following commands:
+
+```sh
+./docker-exec-bringup.sh
+./docker-exec-teleop.sh
+```
 
 ## Build Docker Images Locally
 

@@ -3,12 +3,17 @@ services:
   ros-kobuki:
     image: j3soon/ros-melodic-kobuki
     container_name: ros-melodic-kobuki
-    devices:
-      - /dev/kobuki
+    # For docker container to support hot plugging
+    privileged: true
+    volumes:
+      - /dev/kobuki:/dev/kobuki
+    # Below requires restarting the docker container after plugging kobuki
+    # devices:
+    #   - /dev/kobuki
     working_dir: "/root/catkin_ws"
     command: |-
       bash -c "
       cd ~/catkin_ws &&
       source ./devel/setup.bash &&
-      roslaunch turtlebot_bringup minimal.launch
+      sleep infinity
       "
