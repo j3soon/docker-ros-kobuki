@@ -3,13 +3,8 @@ services:
   ros-kobuki:
     image: j3soon/ros-melodic-kobuki
     container_name: ros-melodic-kobuki
-    # For docker container to support hot plugging
-    privileged: true
-    volumes:
+    devices:
       - /dev/kobuki:/dev/kobuki
-    # Below requires restarting the docker container after plugging kobuki
-    # devices:
-    #   - /dev/kobuki
     working_dir: "/root/catkin_ws"
     command: |-
       bash -c "
