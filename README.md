@@ -1,4 +1,4 @@
-# Minimal Docker Scripts for Yujin Robot's iClebo Kobuki
+# Docker image for Yujin Robot's iClebo Kobuki on ROS 1 Melodic
 
 [<img src="https://img.shields.io/badge/dockerhub-image-important.svg?logo=docker">](https://hub.docker.com/r/j3soon/ros-melodic-kobuki/tags)
 
@@ -17,8 +17,8 @@ More information such as User Guide and Manual Installation steps can be found i
 Clone the repo:
 
 ```sh
-git clone https://github.com/j3soon/ros-kobuki-docker.git
-cd ros-kobuki-docker
+git clone https://github.com/j3soon/docker-ros-kobuki.git
+cd docker-ros-kobuki
 ```
 
 Installation of udev rules must be done on the host machine:
@@ -57,13 +57,13 @@ Although the docker container support hot plugging, if Kobuki is re-plugged or r
 - On amd64 machine:
 
   ```sh
-  docker build -f Dockerfile -t j3soon/ros-melodic-kobuki:latest
+  docker build -f Dockerfile -t j3soon/ros-melodic-kobuki:latest .
   ```
 
 - On arm64 machine:
 
   ```sh
-  docker build -f Dockerfile.jetson -t j3soon/ros-melodic-kobuki:latest
+  docker build -f Dockerfile.jetson -t j3soon/ros-melodic-kobuki:latest .
   ```
 
 If you want to build an image that supports multiple architectures, please refer to the [build workflow](./.github/workflows/build.yaml).
