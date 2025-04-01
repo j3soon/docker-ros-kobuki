@@ -2,6 +2,8 @@
 
 [<img src="https://img.shields.io/badge/dockerhub-image-important.svg?logo=docker">](https://hub.docker.com/r/j3soon/ros-melodic-kobuki/tags)
 
+> Although this repo should still function as intended, future updates for ROS 2 will be maintained at [j3soon/ros2-essentials](https://github.com/j3soon/ros2-essentials/tree/main/kobuki_ws).
+
 ## Prerequisites
 
 Hardware:
